@@ -1,4 +1,5 @@
 import java.lang.*;
+import java.util.Arrays;
 
 public class MergeSort {
     private double[] arr;

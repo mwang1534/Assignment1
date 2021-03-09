@@ -1,33 +1,29 @@
-import java.lang.*;
-import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
 
-public class QuickSort {
+public class RandomizedQuickSort {
 
     private double[] arr;
 
-    public QuickSort(double [] array) {
+    public RandomizedQuickSort(double[] array) {
         this.arr = array;
     }
 
-    private void quickSort(double [] arr, int left, int right) {
+    public int randomquicksort (double[] arr, int left, int right) {
         if (left < right) {
-            int index = partition(arr, left, right);
-            quickSort(arr, left, index-1);
-            quickSort(arr, index + 1, right);
+            int index = partition(this.arr, left, right);
+//            randomquicksort(arr, left, index-1);
+//            randomquicksort(arr, index + 1, right);
+            return index;
         }
-    }
-
-    public long sortTime() {
-        long time1 = System.currentTimeMillis();
-        quickSort(this.arr,0,this.arr.length-1);
-        long time2 = System.currentTimeMillis();
-        return time2 - time1;
+        return 0;
     }
 
     int partition (double[] arr, int left, int right) {
         //Base case -- or reverse of the base case
         if (left < right) {
-            int pivot = left;
+            Random generator = new Random();
+            int pivot = generator.nextInt(arr.length);
             int bot = left + 1; //avoids re-sorting the pivot
             int top = right;
             double store;
@@ -53,5 +49,10 @@ public class QuickSort {
             return top;
         }
         return left;
+    }
+
+    public static void main(String[] args) {
+        RandomizedQuickSort randomizedQuickSort = new RandomizedQuickSort(new double[]{5, 2, 9, 12, 6, 8, 3, 7});
+        //randomizedQuickSort.randomquicksort();
     }
 }

@@ -8,7 +8,7 @@ public class Testing {
 
         for (int i = 0; i < size; i++) {
             Random generator = new Random();
-            double randomDouble = generator.nextInt();
+            double randomDouble = generator.nextDouble();
             doublearray[i] = randomDouble;
         }
         return doublearray;
@@ -20,14 +20,14 @@ public class Testing {
         while (i <= size) {
             InsertionSort insertionsort = new InsertionSort(randomDoubles(i));
             BubbleSort bubblesort = new BubbleSort(randomDoubles(i));
-            SelectionSort selectionsort = new SelectionSort(randomDoubles(i));
+            SelectionSort selectionsort = new SelectionSort(randomDoubles(i)); // it works!
             QuickSort quicksort = new QuickSort(randomDoubles(i));
             MergeSort mergeSort = new MergeSort(randomDoubles(i));
 
             System.out.println("Sort Round: " + (i/50000));
             System.out.println("Insertion Sort time: " + insertionsort.insertionSort());
             System.out.println("Bubble Sort time: " + bubblesort.bubbleSort());
-            System.out.println("Selection Sort time: " + selectionsort.selectionSort());
+            System.out.println("Selection Sort time: " + selectionsort.selectionSort()); // 1/5 baby
             System.out.println("Quick Sort time: " + quicksort.sortTime());
             System.out.println("Merge Sort time: " + mergeSort.sortTime());
 
