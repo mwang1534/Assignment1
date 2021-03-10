@@ -102,13 +102,13 @@ public class RandomizedQuickSort {
         System.out.println("Enter size of the double array (must be a multiple of 50,000!): ");;
         int size = input.nextInt();
         RandomizedQuickSort randomizedQuickSort = new RandomizedQuickSort(randomDoubles(size));
-        int index = randomizedQuickSort.randomquicksort(randomizedQuickSort.arr, 0,
-                randomizedQuickSort.arr.length-1);
-        System.out.println(isSorted(randomizedQuickSort.arr));
+        //int index = randomizedQuickSort.randomquicksort(randomizedQuickSort.arr, 0,
+                //randomizedQuickSort.arr.length-1);
+        //System.out.println(isSorted(randomizedQuickSort.arr));
         //System.out.println(index);
 
-//        randomizedQuickSort.hybridsort(randomizedQuickSort.arr, 0, randomizedQuickSort.arr.length-1);
-//        System.out.println(Arrays.toString(randomizedQuickSort.arr));
-//        System.out.println(isSorted(randomizedQuickSort.arr));
+        randomizedQuickSort.hybridsort(randomizedQuickSort.arr, 0, randomizedQuickSort.arr.length-1);
+        System.out.println(Arrays.toString(randomizedQuickSort.arr));
+        System.out.println(isSorted(randomizedQuickSort.arr));
     }
 }

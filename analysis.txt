@@ -1,0 +1,29 @@
+The running time of bubble sort is Big-O of n^2 due to the nested for loop. The running time of selection sort
+algorithm itself is also Big-O of n^2 because of the nested for loop. Merge sort's running time is Big-O of nlogn
+beecause each time it runs, the array will be split into two almost equal halves and then each item will be sorted to
+the point where the two subarrays will be merged together to make a single sorted array, thus a running time of nlogn.
+Insertion sort's running time is Big-O of n^2 because of the moving loop inside of the for loop. Quick sort's running
+time is Big-O of nlogn because the array will be split into two almost equal halves each time which is the logn part and
+since there are logn levels and each one involves n operations, this makes the total running time nlogn.
+
+The space complexity of merge sort is Big-O of n because we use an extra array while merging. Bubble sort's space
+complexity is Big-O of 1 because only a single additional memory space is required for the temporary storage variable.
+Insertion sort's space complexity is Big-O of 1 because it only swaps within the input array and uses only one temporary
+storage variable. Selection sort's space complexity is Big-O of 1 because of the temporary storage variable. Quick sort
+has a space complexity of Big-O of n.
+
+
+The running time of RandomizedQuickSort is the same as a standard quick sort which is Big-O of nlogn. This is because
+the algorithm works the similarly to standard quick sort where the array will be split into two parts and each element
+involves n operations on each element. The space complexity of RandomizedQuickSort is the same as
+
+The running time of QuadraticSort is the same as insertion sort which is Big-O of n^2. The space complexity of
+QuadraticSort is Big-O of 1 just like insertion sort.
+
+The running time of HybridSort is n^2 because the largest component of HybridSort is the quadratic sort (insertion
+sort) even though it only runs for a portion of the input array. The space complexity of HybridSort is Big-O of n
+because we don't count constants.
+
+Requirement 2&3:
+For the quadratic sorting algorithm, I chose to use insertion sort solely because it ran the fastest of the three
+quadratic sorting algorithms in the first part of the assignment. The chart and data reflects this.
